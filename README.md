@@ -40,9 +40,13 @@ Find below the materials from RPYSOC 2023 Conference
 **NHS-R/NHS.pycom Conference 2023** - *Create Quarto website using RStudio and GitHub*
 
 -  Create Quarto website using RStudio and GitHub
-Quarto presentation slides script: https://github.com/Pablo-source/Pablo-source.github.io/blob/main/NHS_R_Pycom_2023.qmd
+Quarto presentation slides script: <https://github.com/Pablo-source/Pablo-source.github.io/blob/main/NHS_R_Pycom_2023.qmd>
 
 - Quarto Presentation slides available on GitHub pages:
-https://pablo-source.github.io/NHS_R_Pycom_2023.html#/title-slide
+<https://pablo-source.github.io/NHS_R_Pycom_2023.html#/title-slide>
+
+- My GitHub main website designed with Quarto
+<https://pablo-source.github.io/City_maps.html>
+
 
 
