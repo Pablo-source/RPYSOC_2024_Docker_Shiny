@@ -1,6 +1,6 @@
 # Script: renv project setup.R 
 
-## Using {renv} package setup environment for this project
+## Using {renv} package setup environment for this project 
 library(renv)
 
 # 1. Initialize environment for this specific project 
