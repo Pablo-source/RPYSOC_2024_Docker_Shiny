@@ -1,4 +1,4 @@
-# RPYSOC_2024_repo_Docker_Shiny
+# RPYSOC_2024 Docker Shiny
 
 Deploying a Shiny app with Docker in a Raspberry pi. This project describes how to create a Shiny app that is Deployed and run inside a Docker Container running on a Raspbeery pi.
 
