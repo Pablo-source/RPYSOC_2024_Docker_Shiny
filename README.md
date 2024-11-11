@@ -46,7 +46,8 @@ Quarto presentation slides script: <https://github.com/Pablo-source/Pablo-source
 <https://pablo-source.github.io/NHS_R_Pycom_2023.html#/title-slide>
 
 - My GitHub main website designed with Quarto
-<https://pablo-source.github.io/City_maps.html>
+Landing page: <https://pablo-source.github.io/about.html>
+Post designing maps using OMS package: <https://pablo-source.github.io/City_maps.html>
 
 
 
