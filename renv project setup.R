@@ -4,7 +4,7 @@
 library(renv)
 
 # 1. Initialize environment for this specific project 
-# Call renv::init() to start using renv in the current project. This will
+# Call renv::init() to start using renv in the current project. This will 
 ## Setup project infrastructure
 ## Discover packages and install them into a project library
 ## Create a lockfile that records the state of the project

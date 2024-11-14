@@ -1,0 +1,1 @@
+This folder will contain all Shiny app files required to run a Shiny app displaying COVID19 data animated KPI and charts for several countries over a specific period of time

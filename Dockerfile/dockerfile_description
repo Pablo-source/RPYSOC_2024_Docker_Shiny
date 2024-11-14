@@ -1,0 +1,1 @@
+This folder will contain the Dockerfile with the relevant configuration to install R and Shiny in a docker container and run requried packages, also it will deploy the Shiny app on that Docker container and run it inside this adhoc Docker container.
