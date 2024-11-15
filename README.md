@@ -41,9 +41,9 @@ This is the basic shiny app I have prepared for this talk. All its scripts and r
 
 # A more advanced Shiny app with extra features 
 
-In the link below, you will find a fully built Shiny app that has been tailored to run as an isolated environment using {renv} and you can download and run on your machine following the steps below: 
+In the link below, you will find a fully built Shiny app that has been tailored to run as an isolated environment using {renv} and you can download and run on your machine following the steps below, it uses extra packages such as {laflet} to display **interactive maps** and **APIS** to obtain some live data such as lat and long country values: 
 
-**Advanced Shiny app:**<https://github.com/Pablo-source/Basic-Shiny-app>
+**Shiny app with extra features:**<https://github.com/Pablo-source/Basic-Shiny-app>
 
 
 *Just leave some time for the API's to load the data, it will just one minute of preprocessing until the enhanced Shiny app is displayed on your screen following these steps:**
