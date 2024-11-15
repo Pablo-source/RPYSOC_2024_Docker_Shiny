@@ -43,6 +43,9 @@ This is the basic shiny app I have prepared for this talk. All its scripts and r
 
 In the link below, you will find a fully built Shiny app that has been tailored to run as an isolated environment using {renv} and you can download and run on your machine following the steps below: 
 
+**Advanced Shiny app:**<https://github.com/Pablo-source/Basic-Shiny-app>
+
+
 *Just leave some time for the API's to load the data, it will just one minute of preprocessing until the enhanced Shiny app is displayed on your screen following these steps:**
 
 To run this Shiny-app-using-COVID-data app locally, please follow these three steps below:
