@@ -39,6 +39,34 @@ This is the basic shiny app I have prepared for this talk. All its scripts and r
 ![Docker_shiny_app_KPI_section](https://github.com/user-attachments/assets/98f867f7-772c-4c31-80b2-e65c061a8e11)
 
 
+# A more advanced Shiny app with extra features 
+
+In the link below, you will find a fully built Shiny app that has been tailored to run as an isolated environment using {renv} and you can download and run on your machine following the steps below: 
+
+*Just leave some time for the API's to load the data, it will just one minute of preprocessing until the enhanced Shiny app is displayed on your screen following these steps:**
+
+To run this Shiny-app-using-COVID-data app locally, please follow these three steps below:
+
+1-3. Clone Shiny-app-using-COVID-data repo using git on you IDE or your terminal using local Clone HTTPS option https://github.com/Pablo-source/Basic-Shiny-app.git
+
+git clone https://github.com/Pablo-source/Basic-Shiny-app.git
+
+Navigate to the cloned repo, then open Rproject by clicking on the Basic-Shiny-app.Rproj file. This will display the Shiny app files on your "Files" tab in RStudio.
+
+2-3. Run renv::restore() in a new Rscript. The first time the app finshed running, I captured its final state using renv::snapshot() To ensure all required packages are loaded, we reinstall exact packages declared in the project lockfile renv.lock. Then we run renv::restore() to ensure we have all required packages loaded and ready in our R environment.
+
+renv::restore()
+
+If prompted, after running restore() function, choose "1: Activate the project and use the project library." from menu displayed in the R Console.
+
+In the next step when using app_launch_TRIGGER.R script, we will have all required packages for the app loaded by the renv::restore() command.
+
+3-3. Open “app_launch_TRIGGER.R script”
+
+Then press "Source" button in RStudio to trigger the Shiny app.
+This script triggers another script called "app_launch.R" containing runAPP() Shiny function to start the Shiny app.
+
+
 
 ## Previous talks
 
