@@ -33,6 +33,13 @@ The Rocker Project
 <https://hub.docker.com/r/rocker/rstudio>
 
 
+# Shiny app designed for this talk
+This is the basic shiny app I have prepared for this talk. All its scripts and related output and input files can be found inside the **Shiny_app** folder. It runsinside a Docker container. It shows how to use Plotly, ggpplot and standard tidyverse packages using a standard bootstrap grid layout.
+
+![Docker_shiny_app_KPI_section](https://github.com/user-attachments/assets/98f867f7-772c-4c31-80b2-e65c061a8e11)
+
+
+
 ## Previous talks
 
 Find below the materials from RPYSOC 2023 Conference
