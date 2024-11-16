@@ -1,5 +1,5 @@
 # 01_load_app_data.R
-# file: "METRICS_POP_RATES_DATA_FORMATED.csv"
+# Input data file: "\data\METRICS_POP_RATES_DATA_FORMATED.csv"
 
 
 # Required libraries to be loaded (after installing them using the renv::install() command
@@ -11,8 +11,8 @@ library(shiny)
 library(shinydashboard)
 
 # 1. Input file "METRICS_POP_RATES_DATA_FORMATED.csv"
-
-app_data_prep  <-read.table(here("data", "METRICS_POP_RATES_DATA_FORMATED.csv"),
+here()
+app_data_prep  <-read.table(here("Shiny_app","data", "METRICS_POP_RATES_DATA_FORMATED.csv"),
                             header =TRUE, sep =',',stringsAsFactors =TRUE) %>% clean_names() 
 str(app_data_prep)
 

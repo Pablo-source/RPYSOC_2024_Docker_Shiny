@@ -23,7 +23,7 @@ renv::install('janitor')
 renv::install('shiny')
 renv::install('shinydashboard')
 renv::install('zoo') # Install {zoo} package used in script "02_Metrics_population_rates.R
-
+renv:: install('pacman') # Install {pacman} package used in script "03_Shiny_app_data_load.R
 
 # 3 Check status of your lockfile using renv::status() function:
 ## status() reports issues caused by inconsistencies across the project lockfile
