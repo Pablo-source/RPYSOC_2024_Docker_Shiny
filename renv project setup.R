@@ -22,6 +22,8 @@ renv::install('tidyverse')
 renv::install('janitor')
 renv::install('shiny')
 renv::install('shinydashboard')
+renv::install('zoo') # Install {zoo} package used in script "02_Metrics_population_rates.R
+
 
 # 3 Check status of your lockfile using renv::status() function:
 ## status() reports issues caused by inconsistencies across the project lockfile
