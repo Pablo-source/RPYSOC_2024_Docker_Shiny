@@ -33,6 +33,48 @@ The Rocker Project
 <https://hub.docker.com/r/rocker/rstudio>
 
 
+# Shiny app designed for this talk
+This is the basic shiny app I have prepared for this talk. All its scripts and related output and input files can be found inside the **Shiny_app** folder. It runsinside a Docker container. It shows how to use Plotly, ggpplot and standard tidyverse packages using a standard bootstrap grid layout.
+
+![Docker_shiny_app_KPI_section](https://github.com/user-attachments/assets/98f867f7-772c-4c31-80b2-e65c061a8e11)
+
+This image below show the running app including all three main sections: KPIs at the top, dynamic table and plotly line charts and drop down menu section displaying specific confirmed, recovered and death rates by 10,000 population: 
+
+![COVID_19_final_app_docker_browser](https://github.com/user-attachments/assets/e8b62dc4-a7e1-49f8-9952-f35231d7e9d9)
+
+
+# A more advanced Shiny app with extra features 
+
+In the link below, you will find a fully built Shiny app that has been tailored to run as an isolated environment using {renv} and you can download and run on your machine following the steps below, it uses extra packages such as {laflet} to display **interactive maps** and **APIs** to obtain some live data such as lat and long country values: 
+
+**Shiny app with extra features:**<https://github.com/Pablo-source/Basic-Shiny-app>
+
+
+*Just leave some time for the API's to load the data, it will take just one minute of preprocessing until the enhanced Shiny app is displayed on your screen replicating these instructions below:*
+
+To run this Shiny-app-using-COVID-data app locally, please follow these three steps below:
+
+1-3. Clone Shiny-app-using-COVID-data repo using git on you IDE or your terminal using local Clone HTTPS option https://github.com/Pablo-source/Basic-Shiny-app.git
+
+git clone https://github.com/Pablo-source/Basic-Shiny-app.git
+
+Navigate to the cloned repo, then open Rproject by clicking on the Basic-Shiny-app.Rproj file. This will display the Shiny app files on your "Files" tab in RStudio.
+
+2-3. Run renv::restore() in a new Rscript. The first time the app finshed running, I captured its final state using renv::snapshot() To ensure all required packages are loaded, we reinstall exact packages declared in the project lockfile renv.lock. Then we run renv::restore() to ensure we have all required packages loaded and ready in our R environment.
+
+renv::restore()
+
+If prompted, after running restore() function, choose "1: Activate the project and use the project library." from menu displayed in the R Console.
+
+In the next step when using app_launch_TRIGGER.R script, we will have all required packages for the app loaded by the renv::restore() command.
+
+3-3. Open “app_launch_TRIGGER.R script”
+
+Then press "Source" button in RStudio to trigger the Shiny app.
+This script triggers another script called "app_launch.R" containing runAPP() Shiny function to start the Shiny app.
+
+
+
 ## Previous talks
 
 Find below the materials from RPYSOC 2023 Conference
