@@ -40,7 +40,7 @@ This is the basic shiny app I have prepared for this talk. All its scripts and r
 
 This image below show the running app including all three main sections: KPIs at the top, dynamic table and plotly line charts and drop down menu section displaying specific confirmed, recovered and death rates by 10,000 population: 
 
-![Conf_rec_death_cases_10000_pop_line_chart](https://github.com/user-attachments/assets/4a4d3851-d80d-4ece-a89e-02a62c1c370e)
+![COVID_19_final_app_docker_browser](https://github.com/user-attachments/assets/e8b62dc4-a7e1-49f8-9952-f35231d7e9d9)
 
 
 # A more advanced Shiny app with extra features 
