@@ -69,6 +69,7 @@ Then if we type in the terminal **> docker run -it –rm rocker/r-base** and we 
 ![08_Runnig_R_inside_a_Container](https://github.com/user-attachments/assets/9c8aaef8-d1d0-412c-b284-2546937db0b7)
 
 This indicates that we are running R inside a Docker container: where the Terminal has turned into an R console. 
+
 The next step will be to build our Dockerfile, and we use it to instruct Docker how to build our new image
 
 
