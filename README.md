@@ -75,6 +75,10 @@ This indicates that we are running R inside a Docker container: where the Termin
 
 The next step will be to build our Dockerfile, and we use it to instruct Docker how to build our new image. A dockerfile is a text file that must be called “Dockerfile.txt” and it should be located in the project folder directory. 
 
+After building our Dockerfile, we can proceed to Build the image based on our Dockerfile. This is the stage where we have put together the necessary parts for our own Docker image:
+Navigate to the folder level where the Dockerfile we created earlier lives, and run **docker build .** command. 
+
+![09_Building_docker_image_from Dockerfile](https://github.com/user-attachments/assets/c1c60e03-4258-49f7-a834-703b127714a4)
 
 # Shiny app designed for this talk
 This is the basic shiny app I have prepared for this talk. All its scripts and related output and input files can be found inside the **Shiny_app** folder. It runsinside a Docker container. It shows how to use Plotly, ggpplot and standard tidyverse packages using a standard bootstrap grid layout.
