@@ -11,8 +11,8 @@ library(shiny)
 library(shinydashboard)
 
 # 1. Input file "METRICS_POP_RATES_DATA_FORMATED.csv"
-here()
-app_data_prep  <-read.table(here("Shiny_app","data", "METRICS_POP_RATES_DATA_FORMATED.csv"),
+
+app_data_prep  <-read.table(here("app","data", "METRICS_POP_RATES_DATA_FORMATED.csv"),
                             header =TRUE, sep =',',stringsAsFactors =TRUE) %>% clean_names() 
 str(app_data_prep)
 

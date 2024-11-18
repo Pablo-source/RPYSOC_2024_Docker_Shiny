@@ -21,6 +21,7 @@ renv::install('here')
 renv::install('tidyverse')
 renv::install('janitor')
 renv::install('shiny')
+renv::install('DT')
 renv::install('shinydashboard')
 renv::install('zoo') # Install {zoo} package used in script "02_Metrics_population_rates.R
 renv:: install('pacman') # Install {pacman} package used in script "03_Shiny_app_data_load.R

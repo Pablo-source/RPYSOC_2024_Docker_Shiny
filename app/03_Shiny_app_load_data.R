@@ -12,7 +12,7 @@ pacman::p_load(here, tidyverse, janitor, shiny,shinydashboard,plotly)
 # 2. Load main data "METRIC_POP_RATES.csv" as .csv from "data_processed" folder
 
 library(readr)
-METRICS_POP_RATES <- read_csv("Shiny_app/data_processed/METRICS_POP_RATES.csv", 
+METRICS_POP_RATES <- read_csv("app/data_processed/METRICS_POP_RATES.csv", 
                               col_types = cols(...1 = col_skip(), 
                                                date = col_date(format = "%Y-%m-%d")))
 

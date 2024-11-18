@@ -11,7 +11,7 @@ library(shinydashboard)
 
 # 1. Input file "METRICS_POP_RATES_DATA_FORMATED.csv"
 
-app_data_prep  <-read.table(here("Shiny_app","data", "METRICS_POP_RATES_DATA_FORMATED.csv"),
+app_data_prep  <-read.table(here("app","data", "METRICS_POP_RATES_DATA_FORMATED.csv"),
                             header =TRUE, sep =',',stringsAsFactors =TRUE) %>% clean_names() 
 str(app_data_prep)
 
@@ -20,6 +20,10 @@ str(app_data_prep)
 # 2.1 Transform initial date variable into a standard R date using as.Date() function.
 app_date_fmt <- app_data_prep %>% select(!c("x")) %>% mutate(date = as.Date(date) )
 names(app_date_fmt)
+
+# [1] "country"                 "date"                    "confirmed"               "recovered"               "deaths"                 
+#[6] "population"              "conf_7days_moving_avg"   "rec_7days_moving_avg"    "deaths_7days_moving_avg" "conf_x10_000pop_rate"   
+# [11] "rec_x10_000pop_rate"     "deaths_x10_000pop_rate" 
 
 app_data_sorted <- app_date_fmt %>% select(country,date,confirmed,recovered,deaths,population) %>% 
   arrange(country,date)
@@ -40,6 +44,9 @@ METRICS_RATES_prep <- app_data_sorted %>%
   )
 METRICS_RATES_prep
 head(METRICS_RATES_prep)
+
+# 2.2.1.1 After computing rolling mean average, there will be some missing rows, remove
+# then using DPLYR
 
 METRICS_RATES <- METRICS_RATES_prep %>% na.omit()
 head(METRICS_RATES)
@@ -64,9 +71,5 @@ METRICS_RATES_DATA_final <- METRICS_POP_RATES_calc
 rm(list=ls()[! ls() %in% c("METRICS_RATES_DATA_final")])
 
 # 3. Save final data set used for Shiny app in a dedicated \data_processed folder  
-# First I check whether this \data_processed sub-folder exists, if not I create it.
-if(!dir.exists(here("Shiny_app","data_processed")))
-   {dir.create(here("Shiny_app","data_processed"))}
-
-write.csv(METRICS_RATES_DATA_final,here("Shiny_app","data_processed","METRICS_POP_RATES.csv"), row.names = TRUE)
+write.csv(METRICS_RATES_DATA_final,here("app","data_processed","METRICS_POP_RATES.csv"), row.names = TRUE)
 
