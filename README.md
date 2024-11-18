@@ -56,6 +56,17 @@ The Rocker Project
 
 ![03_rocker_r_base_image](https://github.com/user-attachments/assets/31b4c484-a1d1-4f6f-b15b-f2cb940188b3)
 
+This is the command to pull the above rocker/r-base image: 
+![05_docker_pull_r_base_image](https://github.com/user-attachments/assets/3b12718a-4ff9-4849-921a-aeebb81b495a)
+
+Sometimes you might encounter this error when pulling a Docker image: 
+![06_permission_denied_error](https://github.com/user-attachments/assets/b0cea689-6fb9-40a4-829d-142417c9c9c0)
+
+Follow the steps detailed on this website to solve it: Method 3: Enable Non-Root User Access: <https://phoenixnap.com/kb/docker-permission-denied>
+![07_permission_granted_fix](https://github.com/user-attachments/assets/2bad94e3-24f4-4c0e-8163-258bcf088f68)
+
+
+
 
 
 
