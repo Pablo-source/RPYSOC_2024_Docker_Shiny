@@ -82,6 +82,14 @@ Navigate to the folder level where the Dockerfile we created earlier lives, and 
 
 ![09_Building_docker_image_from Dockerfile](https://github.com/user-attachments/assets/c1c60e03-4258-49f7-a834-703b127714a4)
 
+Finally the Docker image built based on our tailored Dockerfile has been completed:
+![11_Docker_image_has_been_built](https://github.com/user-attachments/assets/acca1555-74c9-4293-b2ae-04da1212c3ad)
+
+The final step is to run the Docker image we just built in the previous step
+
+docker run -it --rm -v ~/"R-Script in Docker"/01_data:/01_data -v ~/"R-Script in Docker"/03_output:/03_output myname/myimage
+
+
 # Shiny app designed for this talk
 This is the basic shiny app I have prepared for this talk. All its scripts and related output and input files can be found inside the **Shiny_app** folder. It runsinside a Docker container. It shows how to use Plotly, ggpplot and standard tidyverse packages using a standard bootstrap grid layout.
 
@@ -151,5 +159,5 @@ Post designing maps using OMS package: <https://pablo-source.github.io/City_maps
   
 - statworkx - Running your r scripts in docker -  <https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/>
 
-- Anjuna - Build a Docker image - Once you have created a Dockerfile, you can use it with the “docker build” command. '$ docker build .'
-           This will create a working image. The Dockerfile must be located in the root directory - <https://docs.anjuna.io/sgx/latest/getting_started/tutorial_anjuna_in_docker/build_an_image.html>
+Once you have created a Dockerfile, you can use it with the “docker build” command. '$ docker build .'
+This will create a working image. The Dockerfile must be located in the root directory <https://docs.docker.com/get-started/docker-concepts/building-images/build-tag-and-publish-an-image/>
