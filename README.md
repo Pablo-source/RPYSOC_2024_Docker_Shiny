@@ -65,9 +65,11 @@ Sometimes you might encounter this error when pulling a Docker image:
 Follow the steps detailed on this website to solve it: Method 3: Enable Non-Root User Access: <https://phoenixnap.com/kb/docker-permission-denied>
 ![07_permission_granted_fix](https://github.com/user-attachments/assets/2bad94e3-24f4-4c0e-8163-258bcf088f68)
 
+Then if we type in the terminal **> docker run -it –rm rocker/r-base** and we obtain this output below: 
+![08_Runnig_R_inside_a_Container](https://github.com/user-attachments/assets/9c8aaef8-d1d0-412c-b284-2546937db0b7)
 
-
-
+This indicates that we are running R inside a Docker container: where the Terminal has turned into an R console. 
+The next step will be to build our Dockerfile, and we use it to instruct Docker how to build our new image
 
 
 # Shiny app designed for this talk
@@ -110,8 +112,6 @@ In the next step when using app_launch_TRIGGER.R script, we will have all requir
 Then press "Source" button in RStudio to trigger the Shiny app.
 This script triggers another script called "app_launch.R" containing runAPP() Shiny function to start the Shiny app.
 
-
-
 ## Previous talks
 
 Find below the materials from RPYSOC 2023 Conference
@@ -135,5 +135,8 @@ My *GitHub main website* designed with *Quarto*
 Landing page: <https://pablo-source.github.io/about.html>
 Post designing maps using OMS package: <https://pablo-source.github.io/City_maps.html>
 
+## References
 
-
+- statworkx - How to dockerize shinyapps -  <https://www.statworx.com/en/content-hub/blog/how-to-dockerize-shinyapps/>
+  
+- statworkx - Running your r scripts in docker -  <https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/>
