@@ -145,7 +145,5 @@ Post designing maps using OMS package: <https://pablo-source.github.io/City_maps
   
 - statworkx - Running your r scripts in docker -  <https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/>
 
-- Anjuna - Build a Docker image - Once you have created a Dockerfile, you can use it with the “docker build” command.
+- Anjuna - Build a Docker image - Once you have created a Dockerfile, you can use it with the “docker build” command. '$ docker build .'
            This will create a working image. The Dockerfile must be located in the root directory - <https://docs.anjuna.io/sgx/latest/getting_started/tutorial_anjuna_in_docker/build_an_image.html>
-
-$ docker build . <>
