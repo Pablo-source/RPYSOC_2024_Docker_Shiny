@@ -2,7 +2,7 @@
 
 Deploying a Shiny app with Docker in a Raspberry pi. This project describes how to create a Shiny app that is Deployed inside a Docker Container running on a Raspbeery pi.
 
-The aim of this project is to show a small example on how we can create Shiny apps in Docker to share and Manage them using Docker containers. 
+The aim of this project is to show a small example on how we can create Shiny apps in R and deploying it in Docker to share it and Manage using Docker containers. 
 
 # Main topics covered in this presentation
 
