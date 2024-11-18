@@ -6,7 +6,7 @@ The aim of this project is to show a small example on how we can create Shiny ap
 
 # Main topics covered in this presentation
 
-In this project, I want to show a small example that can be very useful when deploying R code in a cloud computing environment, now that most of the platforms we use to create and deploy apps in the NHS are migrated to the cloud. 
+In this project, I want to show a small example that can be useful when deploying R code in a cloud computing environment, now that most of the platforms we use to create and deploy apps in the NHS are migrated to the cloud. 
 
 The advantage of using cloud services, it that they allow us run code workflows on a regular schedule,  and Docker complement it in several ways by allowing us to schedule a container that runs on a regular schedule that we setup. Also Dockerfile allows us to configure the content of the packages and applications running, so we can always rely on its behaviour and expected output. 
 
