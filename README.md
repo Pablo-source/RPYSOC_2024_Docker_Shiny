@@ -70,7 +70,7 @@ Then if we type in the terminal **> docker run -it –rm rocker/r-base** and we 
 
 This indicates that we are running R inside a Docker container: where the Terminal has turned into an R console. 
 
-The next step will be to build our Dockerfile, and we use it to instruct Docker how to build our new image
+The next step will be to build our Dockerfile, and we use it to instruct Docker how to build our new image. A dockerfile is a text file that must be called “Dockerfile.txt” and it should be located in the project folder directory. 
 
 
 # Shiny app designed for this talk
