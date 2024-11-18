@@ -48,6 +48,9 @@ Docker Hub is the world’s easiest way to create, manage, and deliver your team
 The Rocker Project 
 <https://rocker-project.org/>
 
+- rocker image
+<https://hub.docker.com/u/rocker/>
+
 - rocker/rstudio
 <https://hub.docker.com/r/rocker/rstudio>
 
