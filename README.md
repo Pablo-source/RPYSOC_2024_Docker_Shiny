@@ -10,14 +10,16 @@ In this project, I want to show a small example that can be very useful when dep
 
 The advantage of using cloud services, it that they allow us run code workflows on a regular schedule,  and Docker complement it in several ways by allowing us to schedule a container that runs on a regular schedule that we setup. Also Dockerfile allows us to configure the content of the packages and applications running, so we can always rely on its behaviour and expected output. 
 
+Below are the five main topics I will cover in my presentation:
+
 - What is Docker
 - Design and build your shiny app
 - Create a Dockerfile
 - Build the Docker image from Dockerfile previously created
 - Deploy your Shiny app to a Docker container (using the Terminal)
 
-All these five steps will be explained in detail in the presentation slides I will present in the RPYSOC_2024 Conference. 
-Also before the conference I will make available my salides in this Repo
+Each of them will be explained in detail in the presentation slides I will present in the RPYSOC_2024 Conference. 
+Also, before the conference I will make available my salides in this Repo
 
 # Docker online resources 
 
