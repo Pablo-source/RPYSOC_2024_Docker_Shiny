@@ -19,7 +19,10 @@ Below are the five main topics I will cover in my presentation:
 - Deploy your Shiny app to a Docker container (using the Terminal)
 
 Each of them will be explained in detail in the presentation slides I will present in the RPYSOC_2024 Conference. 
-Also, before the conference I will make available my salides in this Repo
+Also, before the conference I will make available my salides in this Repo.
+
+One key element is the Dockerfile we will create. It is a text file that list instructions for the Docker to follow when building a container image. The Dockerfile contains the steps required to be executed to build the application image.
+
 
 # Docker online resources 
 
