@@ -284,15 +284,15 @@ server <- function(input,output) {
       mutate(Flag_max_date = ifelse(Max_date == date,1,0)) %>% 
       filter(Flag_max_date==1) %>% 
       arrange(desc(CONFR)) %>% 
-      #    mutate(Confirmed_round = round(Confirmed))) %>% 
       group_by(date) %>% 
+      mutate(Confirmed_fmt = round(Confirmed,0)) %>% 
       slice(1:10) %>% 
       ungroup()
     
     COUNTRIES_flipped_conf <- ggplot(conf_top_cases,
-                                     aes(x = reorder(country, + Confirmed), y = Confirmed)) +
+                                     aes(x = reorder(country, + Confirmed_fmt), y = Confirmed_fmt)) +
       geom_bar(position = 'dodge', stat = 'identity',fill = "deepskyblue3") +
-      geom_text(aes(label = Confirmed), position = position_dodge(width = 0.9),
+      geom_text(aes(label = Confirmed_fmt), position = position_dodge(width = 0.9),
                 vjust = -6.30, hjust = + 1.20) +  # Set vjust to -0.30 to display just a small gap between chart and figure 
       ggtitle("Top 10 Countries by COVID-19 Confirmed cases") +
       coord_flip()
@@ -315,15 +315,15 @@ server <- function(input,output) {
       mutate(Flag_max_date = ifelse(Max_date == date,1,0)) %>% 
       filter(Flag_max_date==1) %>% 
       arrange(desc(RECR)) %>% 
-      #    mutate(Confirmed_round = round(Confirmed))) %>% 
       group_by(date) %>% 
+      mutate(Recovered_fmt = round(Recovered,0)) %>% 
       slice(1:10) %>% 
       ungroup()
     
     COUNTRIES_flipped_rec <- ggplot(rec_top_cases,
-                                    aes(x = reorder(country, + Recovered), y = Recovered)) +
+                                    aes(x = reorder(country, + Recovered_fmt), y = Recovered_fmt)) +
       geom_bar(position = 'dodge', stat = 'identity',fill = "darkseagreen2") +
-      geom_text(aes(label = Recovered), position = position_dodge(width = 0.9),
+      geom_text(aes(label = Recovered_fmt), position = position_dodge(width = 0.9),
                 vjust = -6.30, hjust = + 1.20) +  # Set vjust to -0.30 to display just a small gap between chart and figure 
       ggtitle("Top 10 Countries by COVID-19 Recovered cases") +
       coord_flip()
@@ -346,15 +346,15 @@ server <- function(input,output) {
       mutate(Flag_max_date = ifelse(Max_date == date,1,0)) %>% 
       filter(Flag_max_date==1) %>% 
       arrange(desc(DEATHR)) %>% 
-      #    mutate(Confirmed_round = round(Confirmed))) %>% 
+      mutate(Deaths_fmt = round(Deaths,0)) %>% 
       group_by(date) %>% 
       slice(1:10) %>% 
       ungroup()
     
     COUNTRIES_flipped_death <- ggplot(death_top_cases,
-                                      aes(x = reorder(country, + Deaths), y = Deaths)) +
+                                      aes(x = reorder(country, + Deaths_fmt), y = Deaths_fmt)) +
       geom_bar(position = 'dodge', stat = 'identity',fill = "coral1") +
-      geom_text(aes(label = Deaths), position = position_dodge(width = 0.9),
+      geom_text(aes(label = Deaths_fmt), position = position_dodge(width = 0.9),
                 vjust = -6.30, hjust = + 1.20) +  # Set vjust to -0.30 to display just a small gap between chart and figure 
       ggtitle("Top 10 Countries by COVID-19 Death cases") +
       coord_flip()
