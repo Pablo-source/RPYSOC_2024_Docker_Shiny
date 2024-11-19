@@ -86,6 +86,7 @@ Finally the Docker image built based on our tailored Dockerfile has been complet
 ![11_Docker_image_has_been_built](https://github.com/user-attachments/assets/acca1555-74c9-4293-b2ae-04da1212c3ad)
 
 We can use the command “docker image ls” to list the docker images we have built, in this instance it can be identified by the IMAGE ID: 67f74374b225
+
 ![13_Docker_image_built](https://github.com/user-attachments/assets/cdb0ddd6-b265-4808-ac4c-48db053e1d53)
 
 
