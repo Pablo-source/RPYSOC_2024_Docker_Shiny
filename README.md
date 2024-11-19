@@ -85,6 +85,10 @@ Navigate to the folder level where the Dockerfile we created earlier lives, and 
 Finally the Docker image built based on our tailored Dockerfile has been completed:
 ![11_Docker_image_has_been_built](https://github.com/user-attachments/assets/acca1555-74c9-4293-b2ae-04da1212c3ad)
 
+We can use the command “docker image ls” to list the docker images we have built, in this instance it can be identified by the IMAGE ID: 67f74374b225
+![13_Docker_image_built](https://github.com/user-attachments/assets/cdb0ddd6-b265-4808-ac4c-48db053e1d53)
+
+
 The final step is to run the Docker image we just built in the previous step
 
 docker run -it --rm -v ~/"R-Script in Docker"/01_data:/01_data -v ~/"R-Script in Docker"/03_output:/03_output myname/myimage
