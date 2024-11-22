@@ -1,0 +1,1 @@
+This folder contains the Quarto presentation for RPYSOC Conference 2024 in Birmigham
