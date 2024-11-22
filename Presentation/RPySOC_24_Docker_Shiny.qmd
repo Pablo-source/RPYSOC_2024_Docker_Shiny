@@ -1,0 +1,195 @@
+---
+title: "Deploying a Shiny app in a Docker container"
+author: "`Pablo Leon-Rodenas|Data and Analytics|NHSE|RPySOC24`" 
+date: 11/22/2024
+date-format: long
+editor: visual
+format:
+  revealjs:
+    smaller: true 
+    theme: simple
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: figures/quarto.png
+    css: styles.css
+    footer: <https://github.com/Pablo-source>
+resources:
+  - demo.pdf
+---
+
+## Introduction {.smaller}
+
+-   This presentations shows a *Shiny app* deployed inside a *Docker Container* in a Debian desktop similar to Raspberry PI OS
+
+::::: columns
+::: {.column width="40%"}
+![](figures/01_Docker_website.png) <https://www.docker.com/>
+:::
+
+::: {.column width="60%"}
+![](figures/02_Shiny_app_COVID19_Advanced.png) <https://github.com/Pablo-source/Basic-Shiny-app>
+:::
+:::::
+
+## Main topics {.smaller}
+
+-   What is a Docker Container?
+
+-   Design and build your Shiny App
+
+-   Create a Dockerfile
+
+-   Build your adhoc Docker image from Dockerfile
+
+-   Deploy Shiny app to a Docker Container
+
+## What is Docker? {.smaller}
+
+A container is a standard unit of software that **packages up code** and all its **dependencies** so the application runs quickly and reliably from one computing **environment** to **another**.
+
+::::: columns
+::: {.column width="40%"}
+A Docker container image is a lightweight, standalone, **executable package of software** that includes **everything** needed to run an application: code, runtime, system tools, system libraries and settings. ![](figures/03_What_is_Docker.png){width="80%"} <https://www.docker.com/>
+:::
+
+::: {.column width="60%"}
+**Container images become containers** at runtime and in the case of Docker containers – images become containers **when they run on Docker** Engine.
+
+Available for both Linux and Windows-based applications, **containerized software will always run the same**, regardless of the infrastructure.
+
+**Containers isolate software from its environment** and ensure that it works **uniformly** between development and staging.
+
+<https://www.docker.com/resources/what-container/>
+:::
+:::::
+
+## The Rocker Project {.smaller}
+
+I am using **Rocker Project** Docker container image. A specific Docker Container **for the R Environment**. This allows us to **start R inside a Container**
+
+::::: columns
+::: {.column width="40%"}
+![](figures/04_rocker_r_base_image.png){width="80%"} <https://rocker-project.org/>
+
+![](figures/05_R_base_docker_image.png){width="60%"} <https://hub.docker.com/_/r-base>
+:::
+
+::: {.column width="60%"}
+Get **rocker/r-base** Docker image ![](figures/06_Pull_rocker_image.png){width="70%"}
+
+Run Docker image to start R inside a container ![](figures/07_Runnig_R_inside_a_Container.png){width="60%"}
+:::
+:::::
+
+## Shiny App to be deployed in Docker {.smaller}
+
+This Shiny app displays COVID 19 Confirmed, Recovered and Death cases by country for two months period. I have used **renv** to restore entire project after **snapshot** taken.
+
+![](figures/10_renv_snapshot_taken.png){width="30%"}
+
+::::: columns
+::: {.column width="50%"}
+<https://github.com/Pablo-source/RPYSOC_2024_Docker_Shiny> ![](figures/08_Basic_Shiny_app.png){width="70%"}
+:::
+
+::: {.column width="50%"}
+It is a simplified version of this Shiny app <https://github.com/Pablo-source/Basic-Shiny-app> ![](figures/09_Shiny_App_advanced.png){width="80%"}
+:::
+:::::
+
+## 1. Pull image and build Dockerfile {.smaller}
+
+::::: columns
+::: {.column width="50%"}
+Pull required **rocker/r-base** Docker image to build your own.
+
+![](figures/11_docker_pull_r_base_image.png){width="70%"}
+
+Actions in the Docker.txt file
+
+-   Base image on rocker/r-base
+
+-   Replicate local folder structure in Dockerfile
+
+-   Copy files into Dockerfile
+
+-   Run R scripts in Docker when buildinfg the image
+:::
+
+::: {.column width="50%"}
+
+Docker file is a text file we create in the project directory
+
+:   https://github.com/Pablo-source/RPYSOC_2024_Docker_Shiny/blob/ main/Docker.txt ![](figures/12_My_Dockerfile_created.png){width="80%"}
+:::
+:::::
+
+## 2. Build our Docker image from Dockerfile {.smaller}
+
+Then **build** a *specific* image based on our **Dockerfile**. Putting together all components for our **own Docker image**.
+
+Building Docker image takes a couple of minutes. **re-creating the environment** and **installing** all **packages** on **top** of **original rocker/r-base Docker image** we obtained from <https://hub.docker.com/_/r-base>
+
+::::: columns
+::: {.column width="50%"}
+![](figures/13_Build_docker_image_01.png){width="70%"}
+:::
+
+::: {.column width="50%"}
+![](figures/13_Build_docker_image_02.png){width="60%"}
+:::
+:::::
+
+## 3. Build your image and bundle your code {.smaller}
+
+We use **docker build** command at the project folder directory level. Where our Dockerfile is saved.
+
+::::: columns
+::: {.column width="50%"}
+![](figures/14_Docker_build_command.png){width="70%"} ![](figures/15_Docker_build_command_output.png){width="70%"}
+:::
+
+::: {.column width="50%"}
+Use “docker image ls” command to display docker image we just built IMAGE ID: 67f74374b225 ![](figures/16_My_tailored_docker_image_has_been_built.png){width="70%"}
+
+You can modify this docker image you just built and re-build it again after several changes:
+
+> docker build -t myname/myimage .
+:::
+:::::
+
+## 4. Spin a container running your app {.smaller}
+
+Once the **Docker image** has been **built**, then you can **use it** to start in an brand **new container** in Docker.
+
+> docker run -d --rm -p 3838:3838 my-shinyapp-image
+
+![](figures/17_Running_container_you_created.png){width="70%"}
+
+## 5. Share your Docker file {.smaller}
+
+Finally use **docker push command** to **share** your Docker image with the community of Docker users in **Docker Hub**.
+
+> docker push
+
+This is Docker Hub website to share your Docker file and apps
+
+::::: columns
+::: {.column width="50%"}
+<https://login.docker.com/> ![](figures/18_Docker_Hub_Share_apps.png){width="40%"}
+:::
+
+::: {.column width="50%"}
+Browse for Docker files with apps in Docker Hub <https://hub.docker.com/> ![](figures/19_Docker_app_Hub_browse_apps.png){width="80%"}
+:::
+:::::
+
+## THANKS ! {.smaller}
+
+-   Any questions?
+
+-   Email: pablo.leonrodenas\@nhs.net
+
+-   My GitHub Repo: <https://github.com/Pablo-source>
