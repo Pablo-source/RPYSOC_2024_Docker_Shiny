@@ -4,6 +4,10 @@ Deploying a Shiny app with Docker in a Raspberry pi. This project describes how 
 
 The aim of this project is to show a small example on how we can create Shiny apps in R and deploying it in Docker to share it and Manage using Docker containers. 
 
+-	Conference talk *Slides*: <https://pablo-source.github.io/RPySOC_24_Docker_Shiny.html#/title-slide>
+-	Conference talk *Quarto script*: <https://github.com/Pablo-source/Pablo-source.github.io/blob/main/RPySOC_24_Docker_Shiny.qmd>
+
+
 # Main topics covered in this presentation
 
 In this project, I want to show a small example that can be useful when deploying R code in a cloud computing environment, now that most of the platforms we use to create and deploy apps in the NHS are migrated to the cloud. 
